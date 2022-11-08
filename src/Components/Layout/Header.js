@@ -26,15 +26,15 @@ const Header = () => {
                 :
                 <>
                     <Link to="/login" className='font-semibold mx-4 nav2'>Login</Link>
-                    <Link to="/register" className='font-semibold mx-4 nav2'>Sign up</Link>
+                    <Link to="/signup" className='font-semibold mx-4 nav2'>Sign up</Link>
                 </>
         }
 
     </>
 
     return (
-        <div className='mb-28'>
-            <div className="navbar navSticky  py-4 bg-base-100 mb-28 rounded border-b-2	 lg:px-16   ">
+        <div className='mb-20 pb-2'>
+            <div className="navbar navSticky  rounded border-b-2	 lg:px-16   ">
                 <div className="navbar-start">
                     <div className="dropdown ">
                         <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -46,7 +46,7 @@ const Header = () => {
 
                         </ul>
                     </div>
-                    <Link to="/"><img src={logo} width={45} alt="" /></Link>
+                    <Link to="/"><img src={logo} width={75}  alt="" /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="inline-block align-middle menu menu-horizontal p-0">

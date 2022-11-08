@@ -1,5 +1,8 @@
 .nav2:hover{
-    color: turquoise;
+    color: rgb(246, 246, 246);
+}
+.nav2:active{
+    color: whitesmoke !important;
 }
 .navSticky{
     position: fixed;
@@ -7,4 +10,5 @@
     z-index: 1;
     width: 100% ;
     max-width:1280px ;
+    background-color: rgb(251, 66, 29);
 }

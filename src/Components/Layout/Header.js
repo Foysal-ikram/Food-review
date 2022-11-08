@@ -6,9 +6,10 @@ import './Header.css'
 import logo from '../../assets/myimage/logo.png'
 
 const Header = () => {
-    const { user, logOut } = useContext(AuthContext) ;
+    const { user, logOut } = useContext(AuthContext);
+    console.log(user)
     const location = useLocation();
-    const navigate = useNavigate() ;
+    const navigate = useNavigate();
 
     const logOut2 = () => {
         logOut()
@@ -19,10 +20,14 @@ const Header = () => {
     const menue = <>
 
         <Link to="/" className='font-semibold mx-4 nav2'>Home</Link>
-        <Link to="/orders" className='font-semibold mx-4 nav2'>My Orders</Link>
+
+
         {
             user?.email ?
-                <button onClick={logOut2} className="btn btn-ghost ">Log Out</button>
+                <>
+                    <Link to="/myreview" className='font-semibold mx-4 nav2'>My Review</Link>
+                    <button onClick={logOut2} className="btn btn-ghost ">Log Out</button>
+                </>
                 :
                 <>
                     <Link to="/login" className='font-semibold mx-4 nav2'>Login</Link>
@@ -46,7 +51,7 @@ const Header = () => {
 
                         </ul>
                     </div>
-                    <Link to="/"><img src={logo} width={75}  alt="" /></Link>
+                    <Link to="/"><img src={logo} width={75} alt="" /></Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="inline-block align-middle menu menu-horizontal p-0">
@@ -54,8 +59,8 @@ const Header = () => {
 
                     </ul>
                 </div>
-                <div className="navbar-end" onClick={()=>navigate('/cart')} >
-                    <p className="text-2xl btn btn-ghost"><HiOutlineShoppingBag/></p>
+                <div className="navbar-end" onClick={() => navigate('/cart')} >
+                    <p className="text-2xl btn btn-ghost"><HiOutlineShoppingBag /></p>
                 </div>
             </div>
         </div>

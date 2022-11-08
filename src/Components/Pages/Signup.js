@@ -4,7 +4,7 @@ import login from '../../assets/myimage/login.jpg' ;
 import { AuthContext } from "../Loader/UserContext";
 
 const Signup = () => {
-    //const {user , createUser} = useContext(AuthContext)
+    const {user , createUser} = useContext(AuthContext)
     const [error , setError]= useState(null)
     const navigate = useNavigate() ;
 
@@ -22,13 +22,13 @@ const Signup = () => {
             
         }
        
-        // createUser(email,password)
-        // .then(result=>{
-        //     const user= result.user ;
-        //     console.log(user)
-        //     navigate('/') ;
-        // })
-        // .catch(error=>console.error(error))
+        createUser(email,password)
+        .then(result=>{
+            const user= result.user ;
+            console.log(user)
+            navigate('/') ;
+        })
+        .catch(error=>console.error(error))
 
     }
 

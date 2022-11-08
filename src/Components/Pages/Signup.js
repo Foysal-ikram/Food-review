@@ -1,11 +1,38 @@
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import login from '../../assets/myimage/login.jpg' ;
+import { AuthContext } from "../Loader/UserContext";
 
 const Signup = () => {
-    const handleSubmit=()=>{
-        
+    //const {user , createUser} = useContext(AuthContext)
+    const [error , setError]= useState(null)
+    const navigate = useNavigate() ;
+
+    const handleSubmit=event=>{
+        event.preventDefault() ;
+        const form = event.target ;
+        const email= form.email.value ;
+        const name = form.name.value ;
+        const password = form.password.value ;
+        const confirm = form.confirm.value ;
+        console.log(name,email,password,confirm)
+
+        if(password !== confirm){
+            setError('Password did not match')
+            
+        }
+       
+        // createUser(email,password)
+        // .then(result=>{
+        //     const user= result.user ;
+        //     console.log(user)
+        //     navigate('/') ;
+        // })
+        // .catch(error=>console.error(error))
+
     }
 
+  
 
     return (
         <div>

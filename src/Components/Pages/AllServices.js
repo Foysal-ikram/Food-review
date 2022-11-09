@@ -1,12 +1,25 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import AllServiceCard from './AllServiceCard';
 
 const AllServices = () => {
-    const data = useLoaderData() ;
+
+    const [data , setData] = useState([])
+
+    useEffect( ()=>{
+        fetch('http://localhost:5000/services')
+        .then(res=>res.json())
+        .then(data => setData(data))
+    } ,[])
+    
     console.log(data)
     return (
-        <div>
-            <h1>aaaaa</h1>
+        <div className='grid grid-cols-3 '>
+            {
+                data.map(data=> <AllServiceCard
+                key={data._id}
+                data={data}
+                ></AllServiceCard> )
+            }
         </div>
     );
 };

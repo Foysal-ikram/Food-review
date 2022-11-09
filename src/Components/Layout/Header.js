@@ -7,7 +7,7 @@ import logo from '../../assets/myimage/logo.png'
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext);
-    console.log(user)
+    //console.log(user)
     const location = useLocation();
     const navigate = useNavigate();
 

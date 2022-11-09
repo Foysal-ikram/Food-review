@@ -2,14 +2,11 @@ import React from 'react';
 import { AiTwotoneStar } from "react-icons/ai";
 import { useNavigate } from 'react-router-dom';
 
-const ServiceCard = ({service}) => {
+const AllServiceCard = ({data}) => {
+    console.log(data)
+    const {_id , img , description, rating , price, name} = data ;
     const navigate = useNavigate() ;
-    //console.log(service)
-    const {_id , img , description, rating , price, name} =service ;
-
-    const details =(_id)=>{
-        console.log(_id)
-    }
+    
     return (
         <div>
             <div className="card py-6 px-2 w-full min-w-full border-2  bg-base-100 shadow-xl w-full  transform hover:scale-105 ">
@@ -28,7 +25,7 @@ const ServiceCard = ({service}) => {
                         <h2 className='font-sans text-xl font-semibold aaa px-4'>Price: $ {price}</h2>
                         <h2 className='font-sans text-xl font-semibold aaa px-4 flex items-center'> Rating:{rating}<AiTwotoneStar /> </h2>
                     </div>
-                    <p className='px-4 pt-3'>{description.slice(0 , 100)}...</p>
+                    <p className='px-4 pt-3 text-justify'>{description.slice(0 , 100)}...</p>
 
                     
                 </div>
@@ -43,4 +40,4 @@ const ServiceCard = ({service}) => {
     );
 };
 
-export default ServiceCard;
+export default AllServiceCard;

@@ -10,7 +10,7 @@ import { IoCaretForwardSharp, IoCaretBackSharp } from "react-icons/io5";
 const Banner = () => {
     return (
         <div>
-            <div className="carousel w-full lg:mt-20 ">
+            <div className="carousel w-full lg:mt-1 ">
                 <div id="slide1" className="carousel-item relative w-full  ">
                     <div className='overlay'>
                         <img src={bn4} className="w-full" />

@@ -12,7 +12,7 @@ const ServiceView = () => {
         .then(data=>setServices(data))
     } ,[])
     return (
-        <div className='mt-12 mb-16'>
+        <div className=' pt-12 bg-orange-50	'>
             <h1 className='text-center text-5xl font-serif mx-20 mt-4 rounded py-4 bg-blue-200'>My services</h1>
            <div className="grid justify-items-center lg:grid-cols-3 grid-cols-1 gap-8 mx-20 mt-8">
            {

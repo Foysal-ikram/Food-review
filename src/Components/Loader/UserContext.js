@@ -39,7 +39,7 @@ const UserContext =({children})=>{
 
     },[])
 
-const authInfo= {user ,google, createUser,logOut,login} ;
+const authInfo= {user ,google,loading , createUser,logOut,login} ;
 return (
     <div>
         <AuthContext.Provider value={authInfo}>

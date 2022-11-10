@@ -6,6 +6,8 @@ const MyReview = () => {
     const { user, logOut } = useContext(AuthContext)
     const { email } = user;
     const [myreview, setMyreview] = useState([])
+  
+   
 
     useEffect(() => {
         fetch(`http://localhost:5000/myreview?email=${email}`, {
@@ -32,7 +34,7 @@ const MyReview = () => {
 
         if (proceed) {
             console.log('deleting user with id: ', id)
-            fetch(`http://localhost:5000/minereviews/${id}`, {
+            fetch(`https://food-review-server.vercel.app/minereviews/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())
@@ -53,6 +55,10 @@ const MyReview = () => {
 
     return (
         <div>
+            {
+                    myreview?.length === 0 && <h2 className='text-4xl font-serif font-bold text-center p-3 my-64'>You have added no review</h2>    
+                    
+                }
             {
                 myreview.map(review => <MyreviewCard
                     key={review._id}

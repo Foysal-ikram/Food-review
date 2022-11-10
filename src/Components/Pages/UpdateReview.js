@@ -14,7 +14,7 @@ const UpdateReview = () => {
         review.message = message ;
         console.log(review)
 
-        fetch(`http://localhost:5000/myreview/${_id}`, {
+        fetch(`https://food-review-server.vercel.app/myreview/${_id}`, {
             method: 'PUT' ,
             headers : {
                 'content-type' : 'application/json'

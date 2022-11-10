@@ -1,8 +1,8 @@
 .nav2:hover{
-    color: rgb(246, 246, 246);
+    color: rgb(14, 219, 154);
 }
 .nav2:active{
-    color: whitesmoke !important;
+    color: rgb(228, 255, 19) !important;
 }
 .navSticky{
     position: fixed;

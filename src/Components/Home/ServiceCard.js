@@ -9,9 +9,7 @@ const ServiceCard = ({ service }) => {
     //console.log(service)
     const { _id, img, description, rating, price, name } = service;
 
-    const details = (_id) => {
-        console.log(_id)
-    }
+    
     return (
         <div>
             <div className="card  w-full min-w-full border-2  bg-base-100 shadow-xl w-full  transform hover:scale-105 ">

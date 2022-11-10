@@ -7,7 +7,7 @@ const ServiceView = () => {
     const navigate = useNavigate() ;
    
     useEffect(()=>{
-        fetch(`http://localhost:5000/service`)
+        fetch(`https://food-review-server.vercel.app/service`)
         .then(res=>res.json())
         .then(data=>setServices(data))
     } ,[])

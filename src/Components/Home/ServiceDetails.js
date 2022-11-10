@@ -10,12 +10,13 @@ const ServiceDetails = () => {
     const [reviews, setReviews] = useState([]);
     const { user } = useContext(AuthContext)
     const data = useLoaderData()
+
     console.log(data)
     const { _id, name, img, price, rating, description } = data;
     console.log('mongo search ....', name)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/reviews?name=${name}`)
+        fetch(`https://food-review-server.vercel.app/reviews?name=${name}`)
             .then(res => res.json())
             .then(data => {
                 // console.log(data)
@@ -25,7 +26,7 @@ const ServiceDetails = () => {
 
 
 
-    
+
 
     const givereview = event => {
         event.preventDefault();
@@ -47,7 +48,7 @@ const ServiceDetails = () => {
             message
         }
 
-        fetch('http://localhost:5000/review', {
+        fetch('https://food-review-server.vercel.app/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -106,10 +107,14 @@ const ServiceDetails = () => {
 
                 </div>
             </div>
-            {/* -----------------------------------Old Reviews-------------------------------- */}
+ {/* -----------------------------------Old Reviews-------------------------------- */}
 
             <div className='bg-orange-200 border-2 mt-6 rounded'>
                 <h1 className='text-center font-semibold py-6 font-serif	text-3xl	'>Reviews</h1>
+            {
+                    reviews?.length === 0 && <h2 className='text-4xl text-center font-serif font-bold'>No review found</h2>    
+                    
+                }
                 {
                     reviews.map(review => <ReviewDetails
                         key={review._id}

@@ -3,7 +3,7 @@ import React from 'react';
 const Blog = () => {
     return (
         <div>
-            <div className='bg-blue-500 p-4'>
+            <div className='bg-orange-600	 p-4'>
                 <h1 className='bg-blue-200 p-4'>Difference between SQL and NoSQL</h1>
                 <p className='bg-purple-300 p-4'>SQL is relational NoSQL is non-relational <br />
                 Sql is structured data in Table , NoSQL is unstructured ,stored in json file <br />
@@ -12,7 +12,7 @@ const Blog = () => {
 
                  </p>
             </div>
-            <div className='bg-blue-500 p-4'>
+            <div className='bg-orange-600	 p-4'>
                 <h1 className='bg-blue-200 p-4'>What is JWT, and how does it work?</h1>
                 <p className='bg-purple-300 p-4'>
                 JSON Web Token (JWT) is an open standard (RFC 7519) for securely transmitting information between parties as JSON object. It is compact, readable and digitally signed using a private key/ or a public key pair by the Identity Provider(IdP)
@@ -22,7 +22,7 @@ JWT is a token based stateless authentication mechanism. Since it is a client-si
 
                  </p>
             </div>
-            <div className='bg-blue-500 p-4'>
+            <div className='bg-orange-600	 p-4'>
                 <h1 className='bg-blue-200 p-4'>What is the difference between javascript and NodeJS?</h1>
                 <p className='bg-purple-300 p-4'>
                 JavaScript is a simple programming language that can be used with any browser that has the JavaScript Engine installed. Node. js, on the other hand, is an interpreter or execution environment for the JavaScript programming language
@@ -31,7 +31,7 @@ JWT is a token based stateless authentication mechanism. Since it is a client-si
                 <br /><br /> Javascript It's made for creating network-centric apps. on the other hand node js It's made for real-time data-intensive apps that run on multiple platforms.
                  </p>
             </div>
-            <div className='bg-blue-500 p-4'>
+            <div className='bg-orange-600	 p-4'>
                 <h1 className='bg-blue-200 p-4'>How does NodeJS handle multiple requests at the same time?</h1>
                 <p className='bg-purple-300 p-4'>
                 NodeJS receives multiple client requests and places them into EventQueue. NodeJS is built with the concept of event-driven architecture. NodeJS has its own EventLoop which is an infinite loop that receives requests and processes them. <br /><br />  </p>

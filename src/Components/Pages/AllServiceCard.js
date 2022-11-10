@@ -11,17 +11,17 @@ const AllServiceCard = ({ data }) => {
 
     return (
         <div>
-            <div className="card py-6 px-2 w-full min-w-full border-2  bg-base-100 shadow-xl w-full  transform hover:scale-105 ">
+            <div className="card   w-full min-w-full border-2  bg-base-100 shadow-xl w-full  transform hover:scale-105 ">
                 {/* <div onClick={() => navigate(`/mobiles/${_id}`)} > */}<div>
                     <PhotoProvider>
                         <PhotoView src={img}>
-                            <img src={img} width={450} className="max-h-40 lg:max-h-52 px-4 " alt="Shoes" />
+                            <img src={img} width={450} className="max-h-40 lg:max-h-52  " alt="Shoes" />
                             {/* <img src={img} alt="" className="max-h-40 lg:max-h-52 px-4 "/> */}
                         </PhotoView>
                     </PhotoProvider>
                     <div className="">
                         <div className='justify-center'>
-                            <div className='text-center my-8 h-12  '>
+                            <div className='text-center my-4 h-12  '>
                                 <h3 className="card-title inline px-4">
                                     {name}
                                     {/* <div className="badge badge-secondary">NEW</div> */}

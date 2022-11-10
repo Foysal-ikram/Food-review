@@ -13,7 +13,7 @@ const AllServices = () => {
     
     console.log(data)
     return (
-        <div className='grid grid-cols-3 gap-4'>
+        <div className='grid grid-cols-4 gap-8 my-16 mt-32 mx-2'>
             {
                 data.map(data=> <AllServiceCard
                 key={data._id}

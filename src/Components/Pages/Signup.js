@@ -1,9 +1,11 @@
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import login from '../../assets/myimage/login.jpg' ;
+import useTitle from "../../useTitle";
 import { AuthContext } from "../Loader/UserContext";
 
 const Signup = () => {
+    useTitle('signup')
     const {user , createUser} = useContext(AuthContext)
     const [error , setError]= useState(null)
     const navigate = useNavigate() ;

@@ -1,8 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
+import useTitle from '../../useTitle';
 import { AuthContext } from '../Loader/UserContext';
 import MyreviewCard from './MyreviewCard';
 
 const MyReview = () => {
+    useTitle('myreview') 
     const { user, logOut } = useContext(AuthContext)
     const { email } = user;
     const [myreview, setMyreview] = useState([])

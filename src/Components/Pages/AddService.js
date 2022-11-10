@@ -1,8 +1,10 @@
 import React, { useContext } from 'react';
 import { toast } from 'react-toastify';
+import useTitle from '../../useTitle';
 import UserContext, { AuthContext } from '../Loader/UserContext';
 
 const AddService = () => {
+    useTitle('add Service')
     const {user} = useContext(AuthContext) ;
     console.log(user)
 

@@ -37,7 +37,8 @@ const MyReview = () => {
         if (proceed) {
             console.log('deleting user with id: ', id)
             fetch(`https://food-review-server.vercel.app/minereviews/${id}`, {
-                method: 'DELETE'
+                method: 'DELETE' ,
+                headers: { authorization: `Bearer ${localStorage.getItem('food-token')}` }
             })
                 .then(res => res.json())
                 .then(data => {

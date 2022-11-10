@@ -8,4 +8,4 @@ About this project :
 4. It is a fully mobile responsive website. 
 5. The project is live on Firebase , and the server is live on vercel 
 
-6. Live link of the website: 
+6. Live link of the website: https://food-review-web.web.app/

@@ -20,6 +20,7 @@ const Header = () => {
     const menue = <>
 
         <Link to="/" className='font-semibold mx-4 nav2'>Home</Link>
+        <Link to="/blog" className='font-semibold mx-4 nav2'>Blog</Link>
 
 
         {

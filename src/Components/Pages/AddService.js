@@ -15,10 +15,11 @@ const AddService = () => {
         const description = form.description.value;
         const price = form.price.value ;
         const name = form.serviceName.value ;
+        const rating = form.rating.value ;
 
 
         const newService = {
-
+            rating ,
             name,
             price: price,
             email,

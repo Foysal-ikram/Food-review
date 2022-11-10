@@ -9,7 +9,7 @@ const AboutUs = () => {
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCXHPFE2Y5T6ebWBreDL3PvOEZKsA8SsLE7g&usqp=CAU" alt="" width={400}  className='lg:hidden '/>
                 </div>
                 <div className='lg:pr-24 lg:pl-12 text-justify pt-4'>
-                    <h1 className="text-5xl font-bold">About My Services</h1>
+                    <h1 className="text-5xl text-center font-bold">About My Services</h1>
                     <p className="py-6">I mainly serve fastfoods . This can be your better choice. We have some people who makes these food in our home. These foods are extremely healthy and not for baby child. We make this in organic way and with carefully. Working with your trust and love .</p>
                    
                 </div>
